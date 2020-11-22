@@ -11,7 +11,7 @@ export default class ImgApiService {
       .then((data) => {
         console.log(data);
         this.page += 1;
-        return data.images;
+        return data.hits;
       });
   }
   get query() {

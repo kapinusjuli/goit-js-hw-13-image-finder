@@ -1,9 +1,10 @@
 // import './css/common.css';
 
-import menuCardTmpl from "./templates/picture-card.hbs";
+// import menuCardTmpl from "./templates/picture-card.hbs";
 // import cards from './menu.json';
 
 import ImgApiService from "./templates/picture-card.hbs";
+import debounce from "lodash.debounce";
 
 const refs = {
   searhForm: document.querySelector("#search-form"),
@@ -37,8 +38,8 @@ function onLoadMore() {
   ImageApiService.fetchImg().then(appendImageMarkup);
 }
 
-function appendImageMarkup(images) {
-  refs.galleryContainer.insertAdjacentHTML("beforeend", menuCardTmpl(images));
+function appendImageMarkup(hits) {
+  refs.galleryContainer.insertAdjacentHTML("beforeend", ImgApiService(hits));
 }
 
-// cat
+//  cat
