@@ -1,4 +1,4 @@
-// import './css/common.css';
+import "./css/common.css";
 
 import menuCardTmpl from "./templates/picture-card.hbs";
 // import cards from './menu.json';
@@ -31,6 +31,7 @@ function onSearch(e) {
   e.preventDefault();
 
   ImageApiService.query = e.currentTarget.elements.query.value;
+  // ImageApiService.resetPage();
 
   ImageApiService.fetchImg().then(appendImageMarkup);
 }
