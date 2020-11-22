@@ -36,6 +36,8 @@ function onSearch(e) {
   ImageApiService.fetchImg().then(appendImageMarkup);
 }
 
+//
+
 function onLoadMore() {
   //   ImageApiService.query = e.currentTarget.elements.query.value;
   ImageApiService.fetchImg().then(appendImageMarkup);
