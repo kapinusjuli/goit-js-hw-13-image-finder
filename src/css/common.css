@@ -53,9 +53,13 @@ body {
     border: 1px black solid;
 }
 
-.load-more__btn--wrapper {
+.btn-primary {
     text-align: center;
-}
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+     }
+
 
 .gallery__img {
     padding-bottom: 10px;
