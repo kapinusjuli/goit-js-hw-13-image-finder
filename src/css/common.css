@@ -81,7 +81,13 @@ body {
 
 .photo-card {
     position: relative;
+    
 }
+/* 
+img {
+height: 400px;
+width: 600px;
+} */
 
 .stats {
     width: 100%;
@@ -93,6 +99,15 @@ body {
     color: antiquewhite;
     justify-content: space-around;
 }
+
+.stats-item  {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+ /* .material-icons {
+    margin-top: 8px;
+    margin-bottom: 8px;
+} */
 
 .button__wrapper {
     position: fixed;

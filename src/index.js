@@ -24,10 +24,10 @@ const loadMoreBtn = new LoadMoreBtn({
 });
 
 refs.searhForm.addEventListener("submit", onSearch);
-refs.searhForm.addEventListener("submit", scrollTo);
+// refs.searhForm.addEventListener("submit", scrollTo);
 // refs.searhForm.addEventListener("input", debounce(onSearch, 500));
 loadMoreBtn.refs.button.addEventListener("click", onLoadMore);
-loadMoreBtn.refs.button.addEventListener("click", scrollTo);
+// loadMoreBtn.refs.button.addEventListener("click", scrollTo);
 
 // переписываю функцию он серч
 function onSearch(e) {
@@ -52,19 +52,16 @@ function onLoadMore() {
   ImageApiService.fetchImg().then((hits) => {
     appendImageMarkup(hits);
     loadMoreBtn.enable();
-    // console.log(ImageApiService.page);
-    // numberPage = ImageApiService.page - 2;
-    // console.log(numberPage);
-    // window.scrollTo({
-    //   left: numberPage * 70,
-    //   top: 0,
-    //   behavior: "smooth",
-    // });
   });
 }
 
 function appendImageMarkup(hits) {
   refs.galleryContainer.insertAdjacentHTML("beforeend", menuCardTmpl(hits));
+  window.scrollTo({
+    left: 0,
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
   if (hits.length < 12) {
     loadMoreBtn.hide();
   }
@@ -74,12 +71,12 @@ function clearImageContainer() {
   refs.galleryContainer.innerHTML = "";
 }
 
-function scrollTo() {
-  window.scrollTo({
-    left: 0,
-    top: 0,
-    behavior: "smooth",
-  });
-}
+// function scrollTo() {
+//   window.scrollTo({
+//     left: 0,
+//     top: document.body.scrollHeight,
+//     behavior: "smooth",
+//   });
+// }
 
 //  cat
