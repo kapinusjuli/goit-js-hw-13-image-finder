@@ -41,6 +41,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    list-style: none
 }
 
 /* .search-form__btn {
@@ -83,11 +85,11 @@ body {
     position: relative;
     
 }
-/* 
+
 img {
 height: 400px;
 width: 600px;
-} */
+}
 
 .stats {
     width: 100%;
@@ -99,11 +101,11 @@ width: 600px;
     color: antiquewhite;
     justify-content: space-around;
 }
-
+/* 
 .stats-item  {
     margin-top: 8px;
     margin-bottom: 8px;
-}
+} */
  /* .material-icons {
     margin-top: 8px;
     margin-bottom: 8px;
