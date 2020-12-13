@@ -45,11 +45,21 @@ function onSearch(e) {
   onLoadMore();
 }
 
+let numberPage = 0;
+
 function onLoadMore() {
   loadMoreBtn.disable();
   ImageApiService.fetchImg().then((hits) => {
     appendImageMarkup(hits);
     loadMoreBtn.enable();
+    // console.log(ImageApiService.page);
+    // numberPage = ImageApiService.page - 2;
+    // console.log(numberPage);
+    // window.scrollTo({
+    //   left: numberPage * 70,
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
   });
 }
 
